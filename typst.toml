@@ -1,0 +1,53 @@
+[package]
+name = "ugm-presentation-unofficial"
+version = "0.1.0"
+entrypoint = "src/lib.typ"
+authors = ["Fitrafep"]
+description = "An Unofficial UGM Presentation Template"
+repository = "https://github.com/fepfitra/ugm-presentation-unofficial"
+keywords = ["ugm"]
+categories = ["presentation"]
+disciplines = [
+    "agriculture",
+    "anthropology",
+    "archaeology",
+    "architecture",
+    "biology",
+    "business",
+    "chemistry",
+    "communication",
+    "computer-science",
+    "design",
+    "drawing",
+    "economics",
+    "education",
+    "engineering",
+    "fashion",
+    "film",
+    "geography",
+    "geology",
+    "history",
+    "journalism",
+    "law",
+    "linguistics",
+    "literature",
+    "mathematics",
+    "medicine",
+    "music",
+    "painting",
+    "philosophy",
+    "photography",
+    "physics",
+    "politics",
+    "psychology",
+    "sociology",
+    "theater",
+    "theology",
+    "transportation",
+]
+
+[template]
+path = "template"
+entrypoint = "template/main.typ"
+
+[tool]

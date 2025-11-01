@@ -1,21 +1,18 @@
-# ugm-presentation-unofficial
-An Unofficial UGM Presentation Template in Typst
-
-# Usage
-```typst
-#import "@preview/ugm-presentation-unofficial:0.1.0": conf, title, section, slide, quote
+#import "@local/ugm-presentation-unofficial:0.1.0": conf, title, section, slide, quote
 
 #show: doc => conf(
-  num: 2,
+  num: 5,
   doc
 )
 
 #title[
   = Hiya Hiya Hiya
+  #lorem(10)
 ]
 
 #section[
   == Mangtap
+  #lorem(10)
 ]
 
 #slide[
@@ -48,13 +45,11 @@ An Unofficial UGM Presentation Template in Typst
 ]
 
 #quote[
-  #text(size: 20pt, fill: blue.darken(50%), [
+  #text(size: 20pt, [
     #v(2em)
-    "Anunya diiniin, ininya diituin, itunya dianuin"
+    "Jadi, anunya diiniin, ininya diituin, itunya dianuin"
 
-    #h(15em)
-    -Si anu
+    -Si anu-
   ])
 
 ]
-```
