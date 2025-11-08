@@ -1,8 +1,8 @@
-#import "@local/ugm-presentation-unofficial:0.1.0": conf, title, section, slide, quote
+#import "@local/ugm-presentation-unofficial:0.1.0": conf, quote, section, slide, title
 
 #show: doc => conf(
   num: 5,
-  doc
+  doc,
 )
 
 #title[
@@ -30,14 +30,16 @@
 
       $
         H = mat(
-      (diff^2 f) / (diff x_1 diff x_1), (diff^2 f) / (diff x_1 diff x_2), ..., (diff^2 f) / (diff x_1 diff x_n);
-      (diff^2 f) / (diff x_2 diff x_1), (diff^2 f) / (diff x_2 diff x_2), ..., (diff^2 f) / (diff x_2 diff x_n);
-      ..., ..., ..., ...;
-      (diff^2 f) / (diff x_n diff x_1), (diff^2 f) / (diff x_n diff x_2), ..., (diff^2 f) / (diff x_n diff x_n)
-    ) = mat(a_11 , a_12 , ..., a_1n ;
-          a_21 , a_22 , ..., a_2n ;
-          ...  , ...  , ..., ...  ;
-          a_(n 1) , a_(n 2) , ..., a_(n n) )
+          (partial^2 f) / (partial x_1 partial x_1), (partial^2 f) / (partial x_1 partial x_2), ..., (partial^2 f) / (partial x_1 partial x_n);
+          (partial^2 f) / (partial x_2 partial x_1), (partial^2 f) / (partial x_2 partial x_2), ..., (partial^2 f) / (partial x_2 partial x_n);
+          ..., ..., ..., ...;
+          (partial^2 f) / (partial x_n partial x_1), (partial^2 f) / (partial x_n partial x_2), ..., (partial^2 f) / (partial x_n partial x_n)
+        ) = mat(
+          a_11, a_12, ..., a_1n;
+          a_21, a_22, ..., a_2n;
+          ..., ..., ..., ...;
+          a_(n 1), a_(n 2), ..., a_(n n)
+        )
       $
 
       #lorem(20)
