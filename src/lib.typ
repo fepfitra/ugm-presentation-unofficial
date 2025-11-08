@@ -1,46 +1,46 @@
 #let vnum = state("vnum", 1)
-#let bgs = state("bgs", (
+#let bgs = (
   (
     title: "image/1/title.png",
     section: "image/1/section.png",
     slide: "image/1/slide.png",
-    quote: "image/1/quote.png"
+    quote: "image/1/quote.png",
   ),
   (
     title: "image/2/title.png",
     section: "image/1/section.png",
     slide: "image/1/slide.png",
-    quote: "image/2/quote.png"
+    quote: "image/2/quote.png",
   ),
   (
     title: "image/3/title.png",
     section: "image/1/section.png",
     slide: "image/1/slide.png",
-    quote: "image/3/quote.png"
+    quote: "image/3/quote.png",
   ),
   (
     title: "image/4/title.png",
     section: "image/4/section.png",
     slide: "image/4/slide.png",
-    quote: "image/4/quote.png"
+    quote: "image/4/quote.png",
   ),
   (
     title: "image/5/title.png",
     section: "image/5/section.png",
     slide: "image/5/slide.png",
-    quote: "image/5/quote.png"
+    quote: "image/5/quote.png",
   ),
   (
     title: "image/6/title.png",
     section: "image/6/title.png",
     slide: "image/6/slide.png",
-    quote: "image/6/quote.png"
+    quote: "image/6/quote.png",
   ),
-))
+)
 
 #let conf(
-  num:1,
-  doc
+  num: 1,
+  doc,
 ) = [
   #vnum.update(num)
   #set page(paper: "presentation-16-9")
@@ -55,7 +55,7 @@
 
 #let title(content) = context [
   #let num = vnum.get()
-  #let path = bgs.get().at(num - 1).title
+  #let path = bgs.at(num - 1).title
   #set page(background: image(path))
   #align(horizon)[
     #if num == 1 or num == 2 {
@@ -80,7 +80,7 @@
 
 #let section(content) = context [
   #let num = vnum.get()
-  #let path = bgs.get().at(num - 1).section
+  #let path = bgs.at(num - 1).section
   #set page(background: image(path))
   #align(horizon)[
     #if num == 1 or num == 2 or num == 3 {
@@ -100,21 +100,21 @@
 
 #let slide(content) = context [
   #let num = vnum.get()
-  #let path = bgs.get().at(num - 1).slide
+  #let path = bgs.at(num - 1).slide
   #set page(background: image(path))
   #content
 ]
 
 #let quote(content) = context [
   #let num = vnum.get()
-  #let path = bgs.get().at(num - 1).quote
+  #let path = bgs.at(num - 1).quote
   #set page(background: image(path))
 
   #if num == 1 or num == 2 {
     show heading: set text(fill: yellow.darken(10%))
     set text(fill: white)
     align(center, content)
-  } else if num == 3{
+  } else if num == 3 {
     align(center, content)
   } else if num == 4 {
     show heading: set text(fill: yellow.darken(10%))
