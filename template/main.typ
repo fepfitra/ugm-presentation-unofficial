@@ -1,4 +1,4 @@
-#import "@local/ugm-presentation-unofficial:0.1.0": conf, quote, section, slide, title
+#import "@preview/ugm-presentation-unofficial:0.1.0": conf, quote, section, slide, title
 
 #show: doc => conf(
   num: 5,

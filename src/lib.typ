@@ -50,6 +50,21 @@
   #show heading.where(level: 4): set text(size: 20pt, fill: blue.darken(50%))
   #set text(size: 14pt)
   #set grid(columns: (1fr, 1fr), column-gutter: 2em)
+
+  //raw
+  #show raw.where(block: false): highlight.with(
+    top-edge: 13pt,
+    bottom-edge: -7pt,
+    fill: luma(240),
+    radius: 2pt,
+  )
+  #show raw.where(block: true): block.with(
+    fill: luma(240),
+    inset: 5pt,
+    radius: 5pt,
+    above: 10pt,
+    width: 100%,
+  )
   #doc
 ]
 

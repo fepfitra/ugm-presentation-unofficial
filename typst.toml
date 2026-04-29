@@ -3,10 +3,12 @@ name = "ugm-presentation-unofficial"
 version = "0.1.0"
 entrypoint = "src/lib.typ"
 authors = ["Fitrafep"]
-description = "An Unofficial UGM Presentation Template"
+description = "Unofficial UGM presentation."
 repository = "https://github.com/fepfitra/ugm-presentation-unofficial"
-keywords = ["ugm"]
+keywords = ["ugm", "universitas-gadjah-mada", "presentation"]
 categories = ["presentation"]
+license = "MIT"
+exclude = ["*.pdf"]
 disciplines = [
     "agriculture",
     "anthropology",
@@ -49,5 +51,6 @@ disciplines = [
 [template]
 path = "template"
 entrypoint = "template/main.typ"
+thumbnail = "thumbnail.png"
 
 [tool]
